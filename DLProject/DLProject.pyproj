@@ -1,0 +1,124 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>0cf947fe-f0f2-43b2-997a-b3c8232167ce</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>TestAgainstMXNet.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>DLProject</Name>
+    <RootNamespace>DLProject</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="aspp.py" />
+    <Compile Include="backbone\drn.py" />
+    <Compile Include="backbone\mobilenet.py" />
+    <Compile Include="backbone\resnet.py" />
+    <Compile Include="backbone\xception.py" />
+    <Compile Include="backbone\__init__.py" />
+    <Compile Include="Conv2DOffset.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="dataloaders\custom_transforms.py" />
+    <Compile Include="dataloaders\datasets\cityscapes.py" />
+    <Compile Include="dataloaders\datasets\coco.py" />
+    <Compile Include="dataloaders\datasets\combine_dbs.py" />
+    <Compile Include="dataloaders\datasets\pascal.py" />
+    <Compile Include="dataloaders\datasets\sbd.py" />
+    <Compile Include="dataloaders\datasets\__init__.py" />
+    <Compile Include="dataloaders\utils.py" />
+    <Compile Include="dataloaders\__init__.py" />
+    <Compile Include="decoder.py" />
+    <Compile Include="deeplab.py" />
+    <Compile Include="DeformConv2DKeras.py" />
+    <Compile Include="DeformConv2DTorch.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="deform_conv.py" />
+    <Compile Include="demo.py" />
+    <Compile Include="DLKerasTest.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DLProjectKeras_VGG.py" />
+    <Compile Include="DLProjectKeras_Deeplab.py" />
+    <Compile Include="DLProjectKeras_Resnet.py" />
+    <Compile Include="DLProjectKeras.py" />
+    <Compile Include="DLProjectTorch.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="deeplab_K.py" />
+    <Compile Include="Pool2DOffset.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="resnet.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="resnetTorch.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="roi_pooling.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestAgainstMXNet.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="tf_interpolate_2.py" />
+    <Compile Include="tf_interpolate.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SimpleCNN.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="trainNet.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="upsampling.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="utils\calculate_weights.py" />
+    <Compile Include="utils\loss.py" />
+    <Compile Include="utils\lr_scheduler.py" />
+    <Compile Include="utils\metrics.py" />
+    <Compile Include="utils\saver.py" />
+    <Compile Include="utils\summaries.py" />
+    <Compile Include="utils\__init__.py" />
+    <Compile Include="vgg.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vggTorch.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="dataloaders\" />
+    <Folder Include="dataloaders\datasets\" />
+    <Folder Include="backbone\" />
+    <Folder Include="utils\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
